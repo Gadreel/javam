@@ -359,7 +359,7 @@ public class M {
 		
 		ret += ")";
 
-		return ret;
+		return this.escapeValue(ret);
 	}
 
 	/**
