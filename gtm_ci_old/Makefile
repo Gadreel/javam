@@ -2,8 +2,8 @@
 all: libgtm_ci.so
 
 libgtm_ci.so: gtmci.c
-	gcc -c -m32 -g -O2 gtmci.c -I/usr/java/jdk1.6/include -I/usr/java/jdk1.6/include/linux -I/opt/gtm
-	gcc -m32 -shared -o libgtm_ci.so gtmci.o -L/opt/gtm -lgtmshr
+	gcc -c -m64 -g -O2 -fPIC gtmci.c -I/usr/lib/jvm/java/include -I/usr/lib/jvm/java/include/linux -I/usr/local/gtm
+	gcc -m64 -shared -o libgtm_ci.so gtmci.o -L/usr/local/gtm -lgtmshr
 
 clean:	
 	rm -f *.o
