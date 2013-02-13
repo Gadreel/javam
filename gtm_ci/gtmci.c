@@ -5,6 +5,7 @@
 //============================================================================
 
 #include <string.h>
+#include <stdio.h>
 #include "gtmxc_types.h"
 #include "com_divconq_gtm_M.h"
 

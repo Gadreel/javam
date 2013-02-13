@@ -48,19 +48,18 @@ unlock(gln) ;
  lock @("-"_gln)
  quit
  ;
-func(name,args) ;
- n result
- x "s result=$$"_name_args
+func(name,args) n code,result  s code="s result=$$"_name_args
+ x code
  quit result
  ;
  ;
-proc(name,args) ;
- x "d "_name_args
+proc(name,args) n code  s code="d "_name_args
+ x code
  quit 
  ;
  ;
-echo(a) q a
+echo(a) quit a
  ;
-ping(a) q 
+ping(a) w !,"pinged"  quit 
  ;
  ;
