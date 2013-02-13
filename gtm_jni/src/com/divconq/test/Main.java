@@ -1,10 +1,14 @@
 package com.divconq.test;
 
+import java.util.Scanner;
+
 import com.divconq.gtm.M;
 
 public class Main {
 
 	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
 		System.out.println("Set tests: ");
 		
 		M.instance.kill("^xyz");
@@ -26,6 +30,9 @@ public class Main {
 		
 		System.out.println();
 		
+		System.out.println("Enter to continue.");
+		s.nextLine();
+		
 		M.instance.set("^xyz", "a", "b", "d", "carrot");
 		M.instance.set("^xyz", "a", "b", "e", "tomato");
 		M.instance.set("^xyz", "a", "b", "f", "celery");
@@ -41,6 +48,9 @@ public class Main {
 		
 		System.out.println();
 		
+		System.out.println("Enter to continue.");
+		s.nextLine();
+		
 		M.instance.inc(12, "^xyz", "0");
 		
 		System.out.println("From inc, expect 12: " + M.instance.get("^xyz", "0"));
@@ -49,10 +59,19 @@ public class Main {
 		
 		System.out.println("From dec, expect 11: " + M.instance.get("^xyz", "0"));
 		
+		System.out.println("Enter to continue.");
+		s.nextLine();
+		
 		M.instance.kill("^xyz");
 		System.out.println("Kill (expect 'ff'): " + M.instance.data("^xyz"));
 		
+		System.out.println("Enter to continue.");
+		s.nextLine();
+		
 		System.out.println("Func call (expect 'hello world'): " + M.instance.funcCall("echo^gtmjni", "hello world"));
+		
+		System.out.println("Enter to continue.");
+		s.nextLine();
 		
 		System.out.println("Proc call");
 		

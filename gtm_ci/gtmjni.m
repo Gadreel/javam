@@ -11,13 +11,15 @@ kill(gln) ;
  quit
  ;
 order(gln,direction) ;
+ w !,"$o: "_gln_" - "_direction
  quit $order(@gln,direction)
  ;
 query(gln) ;
  quit $query(@gln)
  ;
-increment(gln,expr)
- quit $increment(@gln,expr)
+increment(gln,amt)
+ w !,"$i: "_gln_" - "_amt
+ quit $increment(@gln,amt)
  ;
 tstart(x)   ;
  ;tstart
@@ -34,6 +36,7 @@ trollback(x)  ;
  ;
 data(gln) ;
  n x  s x=$data(@gln)	
+ w !,"$d: "_gln_" - "_x
  quit $s(x=0:"ff",x=1:"ft",x=10:"tf",1:"tt")
  ;
 merge(dest,src) ;
@@ -50,21 +53,15 @@ unlock(gln) ;
  ;
 func(name,args) ;
  n result
- ;
- i '$d(args)#10 s args=""
- ;
- x "s result=$$"_name_$s(args'="":args,1:"")
- ;
+ w !,"s result=$$"_name_args
+ x "s result=$$"_name_args
  quit result
  ;
  ;
 proc(name,args) ;
- i '$d(args)#10 s args=""
- ;
- x "d "_name_$s(args'="":args,1:"")
- ;
+ w !,"d "_name_args
+ x "d "_name_args
  quit 
- ;
  ;
  ;
 echo(a) q a
