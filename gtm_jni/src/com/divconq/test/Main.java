@@ -16,7 +16,7 @@ public class Main {
 		if (args.length > 2) {
 			globalName += "(";
 					
-			for (int i = 1; i < (args.length - 2); i++) {
+			for (int i = 1; i < (args.length - 1); i++) {
 				if (i > 1)
 					globalName += ",";
 					
