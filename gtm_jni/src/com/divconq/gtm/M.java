@@ -258,8 +258,7 @@ public class M {
 	 * @return			the return value from the function
 	 */
 	public String funcCall(String name, String...  args) {
-		System.out.println("func args: " + this.toArgs(args));
-		return this.func(name, this.toGlobalName(args));
+		return this.func(name, this.toArgs(args));
 	}
 
 	/**
@@ -359,7 +358,7 @@ public class M {
 		
 		ret += ")";
 
-		return this.escapeValue(ret);
+		return ret;  //this.escapeValue(ret);
 	}
 
 	/**
