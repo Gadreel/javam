@@ -39,7 +39,7 @@ public class Main {
 		
 		String i = M.instance.next("^xyz", "a", "b", null);
 		
-		System.out.println("order (expect bottom, carrot, tomato, celery)");
+		System.out.println("order (expect c, d, e, f)");
 		
 		while (i != null) {
 			System.out.println("\tfound: " + i);

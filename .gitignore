@@ -1,3 +1,4 @@
 .metadata
 gtm_jni/.settings
 gtm_jni/bin
+*.o

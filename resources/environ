@@ -1,3 +1,0 @@
-export GTMCI=${HOME}/javam/resources/calltab.ci
-export gtmroutines="${HOME}/javam/resources ${gtmroutines}"
-export LD_LIBRARY_PATH=${gtm_dist}:${LD_LIBRARY_PATH}

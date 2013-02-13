@@ -258,6 +258,7 @@ public class M {
 	 * @return			the return value from the function
 	 */
 	public String funcCall(String name, String...  args) {
+		System.out.println("func args: " + this.toArgs(args));
 		return this.func(name, this.toGlobalName(args));
 	}
 
@@ -268,7 +269,7 @@ public class M {
 	 * @param args		arguments to the procedure
 	 */
 	public void procCall(String name, String...  args) {
-		this.proc(name, this.toGlobalName(args));
+		this.proc(name, this.toArgs(args));
 	}
 	
 	/**
@@ -286,7 +287,7 @@ public class M {
 		if (args.length > 1) {
 			globalName += "(";
 					
-			for (int i = 1; i < (args.length); i++) {
+			for (int i = 1; i < args.length; i++) {
 				if (i > 1)
 					globalName += ",";
 					
@@ -332,6 +333,33 @@ public class M {
 		}
 
 		return globalName;
+	}
+	
+	/**
+	 * Create arguments for a func/proc
+	 * 
+	 * @param args 	The argument subscripts
+	 * @return		The argument assembled for use within M
+	 */
+	protected String toArgs(String... args) {
+		if (args == null)
+			throw new IllegalArgumentException("Missing global name");
+
+		String ret = "(";
+				
+		for (int i = 0; i < args.length; i++) {
+			if (i > 0)
+				ret += ",";
+				
+			if (args[i] == null)
+				ret += "null";
+			else
+				ret += "\"" + args[i].replace("\"", "\"\"") + "\""; 
+		}
+		
+		ret += ")";
+
+		return ret;
 	}
 
 	/**
