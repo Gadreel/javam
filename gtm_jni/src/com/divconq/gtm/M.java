@@ -290,7 +290,10 @@ public class M {
 				if (i > 1)
 					globalName += ",";
 					
-				globalName += "\"" + args[i].replace("\"", "\"\"") + "\""; 
+				if (args[i] == null)
+					globalName += "null";
+				else
+					globalName += "\"" + args[i].replace("\"", "\"\"") + "\""; 
 			}
 			
 			globalName += ")";
@@ -319,7 +322,10 @@ public class M {
 					globalName += ",";
 					
 				// escape the subscripts
-				globalName += "\"" + args[i].replace("\"", "\"\"") + "\""; 
+				if (args[i] == null)
+					globalName += "null";
+				else
+					globalName += "\"" + args[i].replace("\"", "\"\"") + "\""; 
 			}
 			
 			globalName += ")";

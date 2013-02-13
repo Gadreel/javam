@@ -42,15 +42,20 @@ extern "C" {
 JNIEXPORT void JNICALL Java_com_divconq_gtm_M_set(JNIEnv *env, jobject obj, jstring globalName, jstring globalValue)
 {
 	isGlnValid(env, globalName);
-	isGlnValid(env, globalValue);
 
 	const char *gln = (*env)->GetStringUTFChars(env, globalName, 0);
-	const char *strVal = (*env)->GetStringUTFChars(env, globalValue, 0);
+	
+	if (gln == NULL) {
+		checkerr(env, gtm_ci("set", gln, NULL));
+	} else {
+		const char *strVal = (*env)->GetStringUTFChars(env, globalValue, 0);
 
-	checkerr(env, gtm_ci("set", gln, strVal));
+		checkerr(env, gtm_ci("set", gln, strVal));
 
-	(*env)->ReleaseStringUTFChars(env, globalName, strVal);
-	(*env)->ReleaseStringUTFChars(env, globalValue, gln);
+		(*env)->ReleaseStringUTFChars(env, globalValue, strVal);
+	}
+
+	(*env)->ReleaseStringUTFChars(env, globalName, gln);
 }
 
 JNIEXPORT void JNICALL Java_com_divconq_gtm_M_kill(JNIEnv *env, jobject obj, jstring globalName)

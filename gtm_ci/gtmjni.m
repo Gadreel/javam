@@ -65,3 +65,10 @@ proc(name,args) ;
  ;
  quit 
  ;
+ ;
+ ;
+echo(a) q a
+ ;
+ping(a) q 
+ ;
+ ;
