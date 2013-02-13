@@ -52,7 +52,6 @@ func(name,args) ;
  n result
  ;
  i '$d(args)#10 s args=""
- s:args'="" args=$$parse(args)
  ;
  x "s result=$$"_name_$s(args'="":args,1:"")
  ;
@@ -61,7 +60,6 @@ func(name,args) ;
  ;
 proc(name,args) ;
  i '$d(args)#10 s args=""
- s:args'="" args=$$parse(args)
  ;
  x "d "_name_$s(args'="":args,1:"")
  ;
