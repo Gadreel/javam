@@ -26,7 +26,7 @@ public class JavaM {
 	// Load the GTM_CI shared library
 	static {
 		try {
-			System.loadLibrary("libgtm_ci");
+			System.loadLibrary("gtm_ci");
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			System.exit(1);

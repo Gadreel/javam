@@ -20,7 +20,7 @@ public class Main {
 				if (i > 1)
 					globalName += ",";
 					
-				globalName += "\"" + args + "\""; 
+				globalName += "\"" + args[i] + "\""; 
 			}
 			
 			globalName += ")";
