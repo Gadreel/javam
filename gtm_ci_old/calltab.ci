@@ -1,0 +1,8 @@
+get        : gtm_char_t*   get^gtmjni(I:gtm_char_t*)
+set        : void          set^gtmjni(I:gtm_char_t*, I:gtm_char_t*)
+kill       : void          kill^gtmjni(I:gtm_char_t*)
+order      : gtm_char_t*   order^gtmjni(I:gtm_char_t*, I:gtm_int_t))
+query      : gtm_char_t*   query^gtmjni(I:gtm_char_t*)
+increment  : gtm_char_t*   increment^gtmjni(I:gtm_char_t*, I:gtm_long_t)
+tstart     : void          tstart^gtmjni(I:gtm_char_t*)
+tcommit    : void          tcommit^gtmjni(I:gtm_char_t*)
