@@ -283,10 +283,10 @@ public class M {
 
 		String globalName = args[0];
 		
-		if (args.length > 2) {
+		if (args.length > 1) {
 			globalName += "(";
 					
-			for (int i = 1; i < (args.length - 1); i++) {
+			for (int i = 1; i < (args.length); i++) {
 				if (i > 1)
 					globalName += ",";
 					
