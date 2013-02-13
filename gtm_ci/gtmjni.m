@@ -45,7 +45,7 @@ lock(gln) ;
  quit
  ;
 unlock(gln) ;
- unlock @("-"_gln)
+ lock @("-"_gln)
  quit
  ;
 func(name,args) ;
