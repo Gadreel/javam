@@ -67,3 +67,6 @@ permissions.  Run it:
 You should then see output from the Java to M calls.  Sets, gets, $d, $i,
 $o and function calls are tested.
 
+## Java and Signals ##
+
+GT.M and Java may both respond to signals.  Sometimes this doesn't work well together.  I have not researched this but there was a hint on a thread that  -XX:+AllowUserSignalHandlers might help.
