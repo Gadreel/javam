@@ -7,15 +7,15 @@ Version 0.1 - 2013 Feb 13
 ## Copyright and License ##
 
 Written by Andy White <andy@etimeline.com>
-Copyright Â© 2013 eTimeline, LLC
+Copyright © 2013 eTimeline, LLC
 
 Originally based on code written by David Wicksell <dlw@linux.com>  
 https://github.com/dlwicksell/nodem
-Copyright Â© 2012,2013 Fourth Watch Software, LC
+Copyright © 2012,2013 Fourth Watch Software, LC
 
 Also based on code written by Lothar Joeckel
 http://code.vistaehr.com/gtm4j
-Copyright Â© 2012
+Copyright © 2012
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License (AGPL)
@@ -30,7 +30,6 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-***
 
 ## Summary and Info ##
 
